@@ -1,0 +1,33 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+nav {
+    font-style: italic;
+
+    }
+label {
+    font-family: Comic Sans MS;
+    }
+
+div {
+    border: 2px groove yellow;
+
+    }
+
+textarea {
+    resize: none;
+    overflow: auto;
+    height: 700px;
+    margin-left: 0%;
+    }
+
+td {
+    text-align: center;
+    }
+}
+
+h1 {
+    margin-left: 20%;
+}
