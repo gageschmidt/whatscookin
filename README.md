@@ -1,6 +1,6 @@
 # whatscookin
 
-This is a project i am working to hone may abilities, implement interesting ideas, and create an application that cuts out the recipe website, advertisement bloated headache that is googling a recipe. As a regular preaper, and eater of food, i always forget exactly what i did to make a dish just right. This is to help circu mvent that, and hopefully maybe help you too!
+This is a project i am working to hone may abilities, implement interesting ideas, and create an application that cuts out the recipe website, advertisement bloated headache that is googling a recipe. As a regular preparer, and eater of food, i always forget exactly what i did to make a dish just right. This is to help circu mvent that, and hopefully maybe help you too!
 
 1/9/2019
 Functionality includes:
