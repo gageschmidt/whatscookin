@@ -14,11 +14,15 @@
         <th>Name</th>
 
     </tr>
-
+    <form method="get" th:object="${recipe}">
     <tr th:each="recipe : ${recipes}">
-        <td th:text="${recipe.name}"></td>
-        <td th:text="${recipe.recipeText}"></td>
+
+        <td th:text="${recipe.name}">text</td>
+        <td th:text="${recipe.recipeText}">text</td>
     </tr>
+    </form>
+    <span th:errors="*{recipeText}" class="error"></span>
+
 </table>
 </body>
 </html>

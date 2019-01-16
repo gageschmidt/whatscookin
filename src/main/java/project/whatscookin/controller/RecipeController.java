@@ -1,21 +1,19 @@
 package project.whatscookin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import project.whatscookin.models.data.forms.Recipe;
 import project.whatscookin.models.data.forms.RecipeDao;
 
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("recipe")
-public class RecipeController {
+@RequestMapping("")
+public class   RecipeController {
 
 
     @Autowired
@@ -48,10 +46,11 @@ public class RecipeController {
         recipeDao.save(newRecipe);
         return "redirect:";
     }
-    @RequestMapping(value = "food", method = RequestMethod.GET)
-    public String viewSingleRecipe(Model model) {
-        model.addAttribute("recipes", recipeDao.findOne(1));
-        return "Recipes/food";
+    @RequestMapping(value="/food/{id}")
+    public String viewRecipe(@PathVariable int id, Model model){
+        model.addAttribute("name", recipeDao.findOne(id));
+        model.addAttribute("recipeText", recipeDao.findOne(id));
+        return "Recipes/food" ;
     }
-}
 
+}

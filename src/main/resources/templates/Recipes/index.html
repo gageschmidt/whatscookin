@@ -19,10 +19,16 @@
     </tr>
 
     <tr th:each="recipe : ${recipes}">
-        <td th:text="${recipe.name}"></td>
+        <td th:text="${recipe.Name}"></td>
+        <td>
+				<span th:each="recipe,iterStat : ${recipes}">
 
+				</span>
+        </td>
+        <td>
+            <a th:href="@{/food/{id}(id=${recipe.id})}">view</a>
+        </td>
     </tr>
-    <a th:href="@{/recipe/food/{id}(id=${id})}"> view</a>
 </table>
 
 
