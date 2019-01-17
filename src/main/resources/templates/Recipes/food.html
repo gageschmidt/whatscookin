@@ -8,21 +8,24 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
+
+
 <table class="table">
 
     <tr>
         <th>Name</th>
 
     </tr>
-    <form method="get" th:object="${recipe}">
-    <tr th:each="recipe : ${recipes}">
 
-        <td th:text="${recipe.name}">text</td>
-        <td th:text="${recipe.recipeText}">text</td>
-    </tr>
-    </form>
-    <span th:errors="*{recipeText}" class="error"></span>
+
+        <td th:each="recipe : ${recipes}"></td>
+    <tr th:text="${recipes}"></tr>
+
+
+
 
 </table>
+
+
 </body>
 </html>

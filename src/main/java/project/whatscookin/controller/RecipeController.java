@@ -47,10 +47,10 @@ public class   RecipeController {
         return "redirect:";
     }
     @RequestMapping(value="/food/{id}")
-    public String viewRecipe(@PathVariable int id, Model model){
-        model.addAttribute("name", recipeDao.findOne(id));
-        model.addAttribute("recipeText", recipeDao.findOne(id));
-        return "Recipes/food" ;
-    }
+    public String viewRecipe(Recipe recipeText, Model model){
+        model.addAttribute("recipe", recipeText);
 
+        return "Recipes/food";
+
+    }
 }
