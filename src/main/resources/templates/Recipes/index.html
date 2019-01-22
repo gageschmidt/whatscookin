@@ -4,7 +4,7 @@
 <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 <body class="container">
 
-<h1 th:text="${title}">Default Title</h1>
+<h1 style="margin-left: 30%;" th:text="${title}">Default Title</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
@@ -20,13 +20,13 @@
 
     <tr th:each="recipe : ${recipes}">
         <td th:text="${recipe.Name}"></td>
+
         <td>
 				<span th:each="recipe,iterStat : ${recipes}">
 
 				</span>
-        </td>
-        <td>
-            <a th:href="@{/food/{id}(id=${recipe.id})}">view</a>
+
+            <a th:href="@{'/food/' + ${recipe.id}}">view</a>
         </td>
     </tr>
 </table>

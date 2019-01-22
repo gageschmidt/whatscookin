@@ -5,19 +5,23 @@ ul {
     }
 nav {
     font-style: italic;
+    text-color: black;
 
+    }
+a {
+    color: black;
     }
 label {
     font-family: Comic Sans MS;
     }
 
 div {
-    border: 2px groove yellow;
+
 
     }
 
 textarea {
-    resize: none;
+
     overflow: auto;
     height: 700px;
     margin-left: 0%;
@@ -30,4 +34,8 @@ td {
 
 h1 {
     margin-left: 20%;
+    text-decoration: underline;
+
 }
+body {
+    background-color: #556B2F}

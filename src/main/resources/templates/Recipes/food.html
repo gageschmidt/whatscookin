@@ -4,27 +4,18 @@
 <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 <body class="container">
 
-<h1 th:text="${title}">Default Title</h1>
+<h1 style="margin-left: 30%;" th:text="${title}">Default Title</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
 
 
-<table class="table">
 
-    <tr>
-        <th>Name</th>
-
-    </tr>
-
-
-        <td th:each="recipe : ${recipes}"></td>
-    <tr th:text="${recipes}"></tr>
-
-
-
-
-</table>
+<h1 th:text="${recipe.name}"></h1>
+<h4>Ingredients:</h4>
+<td th:text="${recipe.ingredients}"></td>
+<h4>Directions:</h4>
+<td th:text="${recipe.directions}"></td>
 
 
 </body>

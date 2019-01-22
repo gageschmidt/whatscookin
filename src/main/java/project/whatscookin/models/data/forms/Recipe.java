@@ -20,8 +20,12 @@ public class Recipe {
     private String name;
 
     @NotNull
-    @Size(min=1, message = "Recipe text must not be empty")
-    private String recipeText;
+    @Size(min=1, message = "No ingredients? Hmm, come back when you have some.")
+    private String ingredients;
+
+    @NotNull
+    @Size(min=1, message = "DIY is cool and all, but a little guidance would be nice")
+    private String directions;
 
     public Recipe() {
 
@@ -29,8 +33,8 @@ public class Recipe {
 
     public Recipe(String name, String recipeText) {
         this.name = name;
-        this.recipeText = recipeText;
-
+        this.ingredients = ingredients;
+        this.directions = directions;
     }
 
     public int getId() {
@@ -49,11 +53,19 @@ public class Recipe {
         this.name = name;
     }
 
-    public String getRecipeText() {
-        return recipeText;
+    public String getIngredients() {
+        return ingredients;
     }
 
-    public void setRecipeText(String recipeText) {
-        this.recipeText = recipeText;
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public String getDirections() {
+        return directions;
+    }
+
+    public void setDirections(String directions) {
+        this.directions = directions;
     }
 }

@@ -1,7 +1,6 @@
 package project.whatscookin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -46,10 +45,10 @@ public class   RecipeController {
         recipeDao.save(newRecipe);
         return "redirect:";
     }
-    @RequestMapping(value="/food/{id}")
-    public String viewRecipe(Recipe recipeText, Model model){
-        model.addAttribute("recipe", recipeText);
-
+    @RequestMapping(value="/food/{id}", method=RequestMethod.GET)
+    public String viewRecipe(Model model, @PathVariable int id){
+        model.addAttribute("recipe", recipeDao.findOne(id));
+        model.addAttribute("title", "Good luck, have fun!");
         return "Recipes/food";
 
     }

@@ -15,10 +15,16 @@
         <span th:errors="*{name}" class="error"></span>
     </div>
     <div class="form-group" style="mex-width:1200px;" >
-        <label th:for="recipeText">Ingredients and Directions!</label>
-        <textarea rows="4" cols="50" class="form-control" th:field="*{recipeText}" />
+        <label th:for="ingredients">Ingredients:</label>
+        <textarea rows="4" cols="50" class="form-control" th:field="*{ingredients}" />
 
-        <span th:errors="*{recipeText}" class="error"></span>
+        <span th:errors="*{ingredients}" class="error"></span>
+    </div>
+    <div class="form-group" style="mex-width:1200px;" >
+        <label th:for="directions">Directions:</label>
+        <textarea rows="4" cols="50" class="form-control" th:field="*{directions}" />
+
+        <span th:errors="*{directions}" class="error"></span>
     </div>
 
     <input type="submit" value="Add a recipe!" />
