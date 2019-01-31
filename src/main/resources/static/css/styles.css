@@ -39,3 +39,7 @@ h1 {
 }
 body {
     background-color: #556B2F}
+
+input.checkbox {
+    display: inline-block;
+}

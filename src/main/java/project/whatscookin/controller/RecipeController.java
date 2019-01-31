@@ -52,4 +52,23 @@ public class   RecipeController {
         return "Recipes/food";
 
     }
+
+    @RequestMapping(value = "remove", method = RequestMethod.GET)
+    public String displayRemoveRecipeForm(Model model) {
+        model.addAttribute("recipes", recipeDao.findAll());
+        model.addAttribute("title", "Delete a recipe");
+        return "Recipes/remove";
+    }
+
+    @RequestMapping(value = "remove", method = RequestMethod.POST)
+    public String processRemoveRecipeForm(@RequestParam int[] recipeIds) {
+
+        for (int recipeId : recipeIds) {
+            recipeDao.delete(recipeId);
+        }
+
+        return "redirect:";
+    }
+
 }
+
