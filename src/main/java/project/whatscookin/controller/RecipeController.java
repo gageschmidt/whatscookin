@@ -70,5 +70,10 @@ public class   RecipeController {
         return "redirect:";
     }
 
+    @RequestMapping(value = "search")
+    public String processSearchRecipe(Model model) {
+        model.addAttribute("title", "Recipe's Found!");
+        return "Recipes/search";
+    }
 }
 
